@@ -1,0 +1,23 @@
+{
+  "name": "personalportfoliowebsite",
+  "version": "1.0.0",
+  "description": "My Website that will hold my portfolio and my achievements and projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakoAburrito/PersonalPortfolioWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakoAburrito/PersonalPortfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/MakoAburrito/PersonalPortfolioWebsite#readme",
+  "dependencies": {
+    "three": "^0.162.0"
+  }
+}
