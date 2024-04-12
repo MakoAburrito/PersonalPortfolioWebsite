@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+canvas{
+
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.NavContainer{
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px; 
+}
+.LogoContainer{
+    display: flex;
+    align-items: center;
+}
+.LogoContainer h1{
+    padding: 0px 10px; 
+    color:rgb(198, 255, 255);
+}
+.LogoContainer img{
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+}
+
+.Items{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color:aqua
+}

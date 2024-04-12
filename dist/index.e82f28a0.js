@@ -584,11 +584,21 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"dV6cC":[function(require,module,exports) {
+var _styleCss = require("../css/style.css");
 var _three = require("three");
 var _orbitControlsJs = require("three/examples/jsm/controls/OrbitControls.js");
 const renderer = new _three.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+const canvasContainer = document.getElementById("canvas-container");
+canvasContainer.appendChild(renderer.domElement);
+// Resize the renderer's canvas to span the entire width of the webpage
+function resizeRenderer() {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+// Call resizeRenderer function when the window is resized
+window.addEventListener("resize", resizeRenderer, false);
+// Initial call to resizeRenderer function
+resizeRenderer();
 const scene = new _three.Scene();
 const camera = new _three.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 const orbit = new (0, _orbitControlsJs.OrbitControls)(camera, renderer.domElement);
@@ -617,7 +627,7 @@ function animate(time) {
 }
 renderer.setAnimationLoop(animate);
 
-},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","../css/style.css":"6ZQyu"}],"ktPTu":[function(require,module,exports) {
 /**
  * @license
  * Copyright 2010-2023 Three.js Authors
@@ -32563,6 +32573,6 @@ class OrbitControls extends (0, _three.EventDispatcher) {
     }
 }
 
-},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"95c2h"}]},["7V9fx","dV6cC"], "dV6cC", "parcelRequiree278")
+},{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"95c2h"}],"6ZQyu":[function() {},{}]},["7V9fx","dV6cC"], "dV6cC", "parcelRequiree278")
 
 //# sourceMappingURL=index.e82f28a0.js.map

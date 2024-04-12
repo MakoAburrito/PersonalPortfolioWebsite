@@ -1,3 +1,4 @@
+import '../css/style.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -5,7 +6,19 @@ const renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-document.body.appendChild(renderer.domElement);
+const canvasContainer = document.getElementById("canvas-container");
+canvasContainer.appendChild(renderer.domElement);
+
+// Resize the renderer's canvas to span the entire width of the webpage
+function resizeRenderer() {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+// Call resizeRenderer function when the window is resized
+window.addEventListener('resize', resizeRenderer, false);
+
+// Initial call to resizeRenderer function
+resizeRenderer();
 
 const scene = new THREE.Scene();
 
@@ -43,3 +56,4 @@ function animate(time) {
 }
 
 renderer.setAnimationLoop(animate);
+
